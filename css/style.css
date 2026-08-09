@@ -747,3 +747,68 @@ nav a.active {
         grid-template-columns: 1fr;
     }
 }
+/* ==============================
+   CONTACT PAGE
+   ============================== */
+
+.contact-hero {
+    max-width: 850px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.contact-card {
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #DBEAFE;
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.92rem;
+    word-break: break-word;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
