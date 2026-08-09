@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Ishwar Lal</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">IL</span>
+                <span>Ishwar Lal</span>
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Page Introduction -->
+        <section class="hero">
+            <div class="container">
+
+                <p class="eyebrow">MY WORK</p>
+
+                <h1>
+                    Projects built around
+                    <span>real-world problems.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A collection of machine learning and data-focused work,
+                    with an emphasis on problem framing, honest evaluation,
+                    and practical decision support.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Lead Case -->
+        <section class="section featured-section">
+
+            <div class="container">
+
+                <p class="section-label">LEAD CASE</p>
+
+                <h2>
+                    FlyRank Content Refresh / Search Intelligence ML Project
+                </h2>
+
+                <p class="hero-description">
+                    A machine learning project using content performance data
+                    to identify potentially declining content and prioritize
+                    items for review.
+                </p>
+
+
+                <!-- Problem -->
+                <div class="case-section">
+
+                    <p class="section-label">01 — PROBLEM</p>
+
+                    <h3>
+                        Identifying content that may need attention
+                    </h3>
+
+                    <p>
+                        The project focuses on identifying content items with
+                        an observed declining label and producing a ranked
+                        priority list that can support content-review decisions.
+                    </p>
+
+                </div>
+
+
+                <!-- Approach -->
+                <div class="case-section">
+
+                    <p class="section-label">02 — APPROACH</p>
+
+                    <h3>
+                        Start simple, validate honestly
+                    </h3>
+
+                    <p>
+                        The modeling work used a client-grouped train/test split
+                        so that clients in the training data did not overlap
+                        with clients in the test data.
+                    </p>
+
+                    <p>
+                        Logistic Regression was selected as a readable baseline
+                        model for the supervised learning problem. During model
+                        inspection, potentially problematic label-derived
+                        signals were checked and removed before training the
+                        clean model.
+                    </p>
+
+                </div>
+
+
+                <!-- Results -->
+                <div class="case-section">
+
+                    <p class="section-label">03 — RESULTS & EVIDENCE</p>
+
+                    <h3>
+                        Clean Logistic Regression
+                    </h3>
+
+                    <div class="results-grid">
+
+                        <div class="result-card">
+                            <span class="result-number">0.65</span>
+                            <span class="result-label">
+                                Precision@20
+                            </span>
+                        </div>
+
+                        <div class="result-card">
+                            <span class="result-number">0.70</span>
+                            <span class="result-label">
+                                Precision@50
+                            </span>
+                        </div>
+
+                        <div class="result-card">
+                            <span class="result-number">3,419</span>
+                            <span class="result-label">
+                                Test rows
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <p class="result-note">
+                        The test split contained 25 training clients and
+                        7 test clients, with zero client overlap.
+                    </p>
+
+                </div>
+
+
+                <!-- Error Analysis -->
+                <div class="case-section">
+
+                    <p class="section-label">04 — ERROR ANALYSIS</p>
+
+                    <h3>
+                        Reading the model's mistakes
+                    </h3>
+
+                    <p>
+                        The clean model produced 964 false positives and
+                        370 false negatives on the test set. Three inspected
+                        cases showed that some content items have mixed signals,
+                        making them difficult to classify cleanly.
+                    </p>
+
+                    <div class="error-grid">
+
+                        <div class="error-card">
+                            <strong>False positive</strong>
+                            <p>
+                                A high-impression item with a page-1 position
+                                received a high declining score despite having
+                                a non-declining label.
+                            </p>
+                        </div>
+
+                        <div class="error-card">
+                            <strong>False positive</strong>
+                            <p>
+                                An item with weak impressions, engagement,
+                                and search position resembled patterns
+                                associated with decline.
+                            </p>
+                        </div>
+
+                        <div class="error-card">
+                            <strong>False negative</strong>
+                            <p>
+                                A genuinely declining item received a score
+                                of 0.4998, showing uncertainty around the
+                                classification threshold.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Tools -->
+                <div class="case-section">
+
+                    <p class="section-label">05 — TOOLS USED</p>
+
+                    <div class="tool-list">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Scikit-learn</span>
+                        <span>Logistic Regression</span>
+                        <span>Jupyter Notebook</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Repository -->
+                <div class="case-section">
+
+                    <p class="section-label">06 — REPOSITORY</p>
+
+                    <h3>
+                        Project development
+                    </h3>
+
+                    <p>
+                        The project notebook and supporting work are maintained
+                        in the FlyRank internship repository.
+                    </p>
+
+                    <a
+                        href="https://github.com/Ishwarsolanki-004"
+                        class="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta-section">
+
+            <div class="container cta-content">
+
+                <div>
+                    <p class="section-label">NEXT</p>
+
+                    <h2>
+                        Want to know more about my work?
+                    </h2>
+
+                    <p>
+                        Learn more about my background and current learning focus.
+                    </p>
+                </div>
+
+                <a href="about.html" class="btn btn-light">
+                    About Me
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <p>
+                © 2026 Ishwar Lal
+            </p>
+
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
