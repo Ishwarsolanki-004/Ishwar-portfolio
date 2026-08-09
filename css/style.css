@@ -630,3 +630,120 @@ nav a.active {
         padding: 40px 0;
     }
 }
+/* ==============================
+   ABOUT PAGE
+   ============================== */
+
+.about-intro {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px rgba(17, 24, 39, 0.10);
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-text h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+
+/* About cards */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.about-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.about-card h3 {
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: var(--muted);
+}
+
+
+/* About wide sections */
+
+.about-wide {
+    max-width: 900px;
+}
+
+.education-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 25px;
+}
+
+.education-card h3 {
+    margin-bottom: 10px;
+}
+
+.education-card p {
+    color: var(--muted);
+}
+
+
+/* Current focus */
+
+.current-focus {
+    background: var(--white);
+}
+
+.current-focus p:not(.section-label) {
+    color: var(--muted);
+    max-width: 800px;
+    margin-bottom: 18px;
+}
+
+.current-focus .btn {
+    margin-top: 15px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-photo {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
