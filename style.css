@@ -12,11 +12,11 @@
   --text-primary:  #ECEFF4;
   --text-secondary:#9AA4B6;
   --text-muted:    #6B7484;
-  --signal:        #6C8CFF;   /* indigo — baseline / clean signal */
-  --signal-dim:    #2B3560;
-  --flag:          #F5A623;   /* amber — flagged / anomalous data */
-  --flag-dim:      #4A3A19;
-  --good:          #4ADE9A;
+  --signal:        #5FA8D3;   /* steel blue — baseline / clean signal */
+  --signal-dim:    #1C3140;
+  --flag:          #E08650;   /* rust orange — flagged / anomalous data */
+  --flag-dim:      #3D2417;
+  --good:          #86C08A;
 
   /* Type */
   --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
@@ -143,7 +143,7 @@ p{ margin: 0 0 1em; color: var(--text-secondary); }
 }
 .brand-mark{
   width: 32px; height:32px; border-radius: 8px;
-  background: linear-gradient(155deg, var(--signal), #3A4CC7);
+  background: linear-gradient(155deg, var(--signal), #2E5A73);
   display:flex; align-items:center; justify-content:center;
   font-family: var(--font-mono); font-size:.78rem; font-weight:700;
   color:#05070A;
@@ -174,6 +174,10 @@ p{ margin: 0 0 1em; color: var(--text-secondary); }
 .nav-cta:hover{ border-color: var(--signal); background: var(--signal-dim); }
 .nav-right{ display:flex; align-items:center; gap:1.5rem; }
 
+/* The Resume link inside .nav-links is for the mobile menu only —
+   hidden on desktop, where the standalone .desktop-only button shows instead */
+.nav-links li.mobile-resume-item{ display:none; }
+
 .nav-toggle{
   display:none; background:none; border:1px solid var(--border);
   border-radius: var(--radius-sm); width:40px; height:40px;
@@ -196,6 +200,7 @@ p{ margin: 0 0 1em; color: var(--text-secondary); }
   }
   .nav-links.is-open{ opacity:1; visibility:visible; transform: translateY(0); }
   .nav-links a{ font-size: 1.15rem; }
+  .nav-links li.mobile-resume-item{ display:list-item; }
   .nav-cta.desktop-only{ display:none; }
   .nav-toggle{ display:inline-flex; }
 }
@@ -218,7 +223,7 @@ p{ margin: 0 0 1em; color: var(--text-secondary); }
 .btn-primary{
   background: var(--signal); color: #05070A; font-weight:600;
 }
-.btn-primary:hover{ background:#7C99FF; }
+.btn-primary:hover{ background:#7DBEE0; }
 .btn-outline{
   border-color: var(--border); color: var(--text-primary); background: transparent;
 }
@@ -250,7 +255,7 @@ p{ margin: 0 0 1em; color: var(--text-secondary); }
 }
 .hero-panel::before{
   content:""; position:absolute; inset:0;
-  background: radial-gradient(120% 100% at 100% 0%, rgba(108,140,255,.14), transparent 60%);
+  background: radial-gradient(120% 100% at 100% 0%, rgba(95,168,211,.16), transparent 60%);
   pointer-events:none;
 }
 .readout-head{
@@ -262,7 +267,7 @@ p{ margin: 0 0 1em; color: var(--text-secondary); }
 .readout-dot{
   width:7px; height:7px; border-radius:50%; background: var(--good);
   display:inline-block; margin-right:.5rem;
-  box-shadow: 0 0 0 3px rgba(74,222,154,.15);
+  box-shadow: 0 0 0 3px rgba(134,192,138,.18);
 }
 .readout-grid{
   display:grid; grid-template-columns: 1fr 1fr; gap: 1px;
@@ -357,7 +362,7 @@ section{ padding: clamp(3rem, 7vw, 5.5rem) 0; }
 }
 .feature-visual{
   background:
-    radial-gradient(80% 80% at 20% 20%, rgba(108,140,255,.22), transparent 60%),
+    radial-gradient(80% 80% at 20% 20%, rgba(95,168,211,.24), transparent 60%),
     linear-gradient(160deg, var(--bg-raised-2), var(--bg));
   border-right: 1px solid var(--border);
   padding: 2rem; display:flex; flex-direction:column; justify-content:space-between;
@@ -489,7 +494,7 @@ section{ padding: clamp(3rem, 7vw, 5.5rem) 0; }
 }
 .cta-band::before{
   content:""; position:absolute; inset:0;
-  background: radial-gradient(60% 120% at 50% 0%, rgba(108,140,255,.16), transparent 70%);
+  background: radial-gradient(60% 120% at 50% 0%, rgba(95,168,211,.18), transparent 70%);
 }
 .cta-band h2{ margin-bottom: .6rem; }
 .cta-band p{ margin: 0 auto 1.6rem; }
