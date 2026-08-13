@@ -1,274 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About | Ishwar Lal</title>
-
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Ishwar Lal</title>
+<meta name="description" content="About Ishwar Lal — B.Tech student focused on Machine Learning and Data Science, with skills in Python, Scikit-learn, Pandas, and SQL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="container nav-content">
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">IL</span>
+      Ishwar Lal
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="resume.pdf" target="_blank" rel="noopener noreferrer" data-resume-link>Resume</a></li>
+      </ul>
+      <a class="nav-cta desktop-only" href="resume.pdf" target="_blank" rel="noopener noreferrer" data-resume-link>Resume</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
 
-            <a href="index.html" class="logo">
-                <span class="logo-mark">IL</span>
-                <span>Ishwar Lal</span>
-            </a>
+<main id="main">
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html" class="active">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-
+  <section>
+    <div class="container">
+      <div class="about-hero reveal">
+        <div class="about-photo">
+          <img src="profile.jpeg" alt="Portrait of Ishwar Lal" width="220" height="220" loading="eager">
         </div>
-    </header>
-
-
-    <main>
-
-        <!-- About Hero -->
-        <section class="hero about-hero">
-
-            <div class="container about-intro">
-
-                <div class="about-photo">
-                    <img
-                        src="profile.jpeg"
-                        alt="Ishwar Lal"
-                    >
-                </div>
-
-                <div class="about-text">
-
-                    <p class="eyebrow">ABOUT ME</p>
-
-                    <h1>
-                        Building my path in
-                        <span>Machine Learning.</span>
-                    </h1>
-
-                    <p class="hero-description">
-                        I am a B.Tech student interested in Machine Learning
-                        and Data Science. I enjoy learning by working on
-                        practical problems and turning data into useful
-                        insights and solutions.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Interests -->
-        <section class="section">
-
-            <div class="container">
-
-                <p class="section-label">MY INTERESTS</p>
-
-                <h2>
-                    What I am focused on.
-                </h2>
-
-                <div class="about-grid">
-
-                    <div class="about-card">
-
-                        <div class="skill-icon">ML</div>
-
-                        <h3>Machine Learning</h3>
-
-                        <p>
-                            Learning how supervised machine learning models
-                            can be applied to real-world problems and
-                            evaluated honestly.
-                        </p>
-
-                    </div>
-
-
-                    <div class="about-card">
-
-                        <div class="skill-icon">DS</div>
-
-                        <h3>Data Science</h3>
-
-                        <p>
-                            Working with data, exploring signals, preparing
-                            features, and communicating results clearly.
-                        </p>
-
-                    </div>
-
-
-                    <div class="about-card">
-
-                        <div class="skill-icon">AI</div>
-
-                        <h3>Applied AI</h3>
-
-                        <p>
-                            Exploring practical applications of artificial
-                            intelligence and building projects to strengthen
-                            my understanding.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Technical Skills -->
-        <section class="section featured-section">
-
-            <div class="container">
-
-                <p class="section-label">TECHNICAL SKILLS</p>
-
-                <h2>
-                    Tools I work with.
-                </h2>
-
-                <div class="tool-list">
-
-                    <span>Python</span>
-                    <span>Machine Learning</span>
-                    <span>Pandas</span>
-                    <span>NumPy</span>
-                    <span>Scikit-learn</span>
-                    <span>Matplotlib</span>
-                    <span>SQL</span>
-                    <span>Git & GitHub</span>
-                    <span>Jupyter Notebook</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Education -->
-        <section class="section">
-
-            <div class="container about-wide">
-
-                <p class="section-label">EDUCATION</p>
-
-                <h2>
-                    Building a strong technical foundation.
-                </h2>
-
-                <div class="education-card">
-
-                    <h3>B.Tech</h3>
-
-                    <p>
-                        Currently pursuing a Bachelor of Technology degree,
-                        with a focus on developing skills in programming,
-                        data, and machine learning.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Current Focus -->
-        <section class="section current-focus">
-
-            <div class="container about-wide">
-
-                <p class="section-label">CURRENT FOCUS</p>
-
-                <h2>
-                    Learning by building.
-                </h2>
-
-                <p>
-                    I am currently strengthening my Machine Learning skills
-                    through practical projects, model evaluation, data
-                    analysis, and hands-on internship work.
-                </p>
-
-                <p>
-                    My goal is to become better at taking a problem from
-                    data preparation and problem framing through modeling,
-                    evaluation, and clear communication of results.
-                </p>
-
-                <a href="projects.html" class="btn btn-primary">
-                    View My Projects
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- CTA -->
-        <section class="cta-section">
-
-            <div class="container cta-content">
-
-                <div>
-
-                    <p class="section-label">LET'S CONNECT</p>
-
-                    <h2>
-                        Want to see what I am building?
-                    </h2>
-
-                    <p>
-                        Explore my projects and follow my learning journey.
-                    </p>
-
-                </div>
-
-                <a href="projects.html" class="btn btn-light">
-                    Explore Projects
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-
-        <div class="container footer-content">
-
-            <p>
-                © 2026 Ishwar Lal
-            </p>
-
-            <div>
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-            </div>
-
+        <div>
+          <span class="eyebrow">About Me</span>
+          <h1>Building my path in Machine Learning.</h1>
+          <p class="lede">I'm a B.Tech student interested in Machine Learning and Data Science. I enjoy learning by working on practical problems, and turning data into useful insights and honestly-evaluated solutions.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
-    </footer>
+  <!-- INTERESTS -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">My Interests</span>
+        <h2>What I'm focused on.</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="tile reveal">
+          <div class="tile-icon" aria-hidden="true">ML</div>
+          <h3>Machine Learning</h3>
+          <p>Learning how supervised machine learning models can be applied to real-world problems, and evaluated honestly.</p>
+        </div>
+        <div class="tile reveal">
+          <div class="tile-icon" aria-hidden="true">DS</div>
+          <h3>Data Science</h3>
+          <p>Working with data, exploring signals, preparing features, and communicating results clearly.</p>
+        </div>
+        <div class="tile reveal">
+          <div class="tile-icon" aria-hidden="true">AI</div>
+          <h3>Applied AI</h3>
+          <p>Exploring practical applications of artificial intelligence, and building projects to strengthen my understanding.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SKILLS -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Technical Skills</span>
+        <h2>Tools I work with.</h2>
+      </div>
+      <div class="skill-groups">
+        <div class="skill-group reveal">
+          <h3>Programming</h3>
+          <ul class="skill-list">
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Machine Learning</h3>
+          <ul class="skill-list">
+            <li>Scikit-learn</li>
+            <li>Logistic Regression</li>
+            <li>Model Evaluation</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Data Science &amp; Libraries</h3>
+          <ul class="skill-list">
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Matplotlib</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Databases</h3>
+          <ul class="skill-list">
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Tools</h3>
+          <ul class="skill-list">
+            <li>Git &amp; GitHub</li>
+            <li>Jupyter Notebook</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Education</span>
+        <h2>Building a strong technical foundation.</h2>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-mark" aria-hidden="true">B.Tech</div>
+        <div>
+          <h3>Bachelor of Technology</h3>
+          <p>Currently pursuing a B.Tech degree, with a focus on developing skills in programming, data, and machine learning.</p>
+          <span class="placeholder-text">Add your university name, specialization, and expected graduation year</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT FOCUS -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Current Focus</span>
+        <h2>Learning by building.</h2>
+        <p class="lede">I'm currently strengthening my machine learning skills through practical projects, model evaluation, data analysis, and hands-on internship work. My goal is to get better at taking a problem from data preparation and framing, through modeling and evaluation, to clearly communicating the results.</p>
+        <div class="btn-row">
+          <a href="projects.html" class="btn btn-primary">View My Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="cta-band reveal">
+        <span class="eyebrow" style="justify-content:center;">Let's Connect</span>
+        <h2>Want to see what I'm building?</h2>
+        <p class="lede" style="margin-left:auto;margin-right:auto;">Explore my projects and follow my learning journey.</p>
+        <div class="btn-row">
+          <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+          <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Ishwar Lal</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
