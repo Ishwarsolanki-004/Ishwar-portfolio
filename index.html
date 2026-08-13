@@ -1,261 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ishwar Lal | Machine Learning</title>
-
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ishwar Lal | Machine Learning &amp; Data Science</title>
+<meta name="description" content="Ishwar Lal — B.Tech student building practical machine learning and data science projects. Exploring ML, data analysis, and applied AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="container nav-content">
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">IL</span>
+      Ishwar Lal
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="resume.pdf" target="_blank" rel="noopener noreferrer" data-resume-link>Resume</a></li>
+      </ul>
+      <a class="nav-cta desktop-only" href="resume.pdf" target="_blank" rel="noopener noreferrer" data-resume-link>Resume</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
 
-            <a href="index.html" class="logo">
-                <span class="logo-mark">IL</span>
-                <span>Ishwar Lal</span>
-            </a>
+<main id="main">
 
-            <nav>
-                <a href="index.html" class="active">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-copy">
+      <span class="eyebrow">B.Tech Student · Machine Learning &amp; Data Science</span>
+      <h1>Turning real-world data into practical machine learning solutions.</h1>
+      <p class="lede">I'm Ishwar Lal, a B.Tech student building applied ML and data science projects — from framing the problem and preparing data, to training models and evaluating results honestly.</p>
+      <div class="btn-row">
+        <a href="projects.html" class="btn btn-primary">
+          View Projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="resume.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer" data-resume-link>Resume</a>
+        <a href="https://github.com/Ishwarsolanki-004" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/ishwar-lal20a04" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+        <a href="contact.html" class="btn btn-ghost">Contact →</a>
+      </div>
+    </div>
 
+    <div class="hero-panel" aria-label="Snapshot from the FlyRank ML project">
+      <div class="readout-head">
+        <span><span class="readout-dot" aria-hidden="true"></span>flyrank_model.ipynb</span>
+        <span>clean logistic regression</span>
+      </div>
+      <div class="readout-grid">
+        <div class="readout-cell">
+          <div class="val signal">0.65</div>
+          <div class="lbl">Precision@20</div>
         </div>
-    </header>
-
-
-    <!-- Hero -->
-    <main>
-
-        <section class="hero">
-            <div class="container hero-content">
-
-                <div class="hero-text">
-
-                    <p class="eyebrow">
-                        MACHINE LEARNING & DATA
-                    </p>
-
-                    <h1>
-                        Turning real-world data into
-                        <span>practical machine learning solutions.</span>
-                    </h1>
-
-                    <p class="hero-description">
-                        I turn real-world data into practical machine learning solutions.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="projects.html" class="btn btn-primary">
-                            View My Work
-                        </a>
-
-                        <a href="contact.html" class="btn btn-secondary">
-                            Get in Touch
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="hero-card">
-                    <div class="monogram">IL</div>
-
-                    <p class="hero-card-title">
-                        Machine Learning
-                    </p>
-
-                    <p class="hero-card-text">
-                        Data • Insight • Impact
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- Introduction -->
-        <section class="section">
-            <div class="container intro-grid">
-
-                <div>
-                    <p class="section-label">ABOUT MY WORK</p>
-
-                    <h2>
-                        Learning by building with real data.
-                    </h2>
-                </div>
-
-                <div>
-                    <p>
-                        My portfolio focuses on machine learning and data-focused
-                        projects, with an emphasis on understanding the problem,
-                        working with data, evaluating models, and communicating
-                        useful results.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- Featured FlyRank Project -->
-        <section class="section featured-section">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <div>
-                        <p class="section-label">FEATURED CASE</p>
-
-                        <h2>
-                            FlyRank ML Project
-                        </h2>
-                    </div>
-
-                    <a href="projects.html" class="text-link">
-                        View Project →
-                    </a>
-                </div>
-
-
-                <div class="project-card">
-
-                    <div class="project-content">
-
-                        <p class="project-tag">
-                            CONTENT REFRESH / SEARCH INTELLIGENCE
-                        </p>
-
-                        <h3>
-                            FlyRank Content Refresh / Search Intelligence ML Project
-                        </h3>
-
-                        <p>
-                            A machine learning project focused on using search and
-                            content performance data to identify items that may
-                            need attention and support content prioritization.
-                        </p>
-
-                        <a href="projects.html" class="btn btn-primary">
-                            Explore Case
-                        </a>
-
-                    </div>
-
-                    <div class="project-visual">
-                        <div class="visual-box">
-                            <span>ML</span>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Skills Overview -->
-        <section class="section">
-
-            <div class="container">
-
-                <p class="section-label">SKILLS OVERVIEW</p>
-
-                <h2>
-                    Tools and areas I am building with.
-                </h2>
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <div class="skill-icon">ML</div>
-                        <h3>Machine Learning</h3>
-                        <p>
-                            Building and evaluating machine learning models
-                            around practical problems.
-                        </p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon">DS</div>
-                        <h3>Data Science</h3>
-                        <p>
-                            Working with data to find signals, evaluate results,
-                            and communicate findings.
-                        </p>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon">AI</div>
-                        <h3>Applied AI</h3>
-                        <p>
-                            Exploring practical applications of AI and
-                            machine learning.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Interview CTA -->
-        <section class="cta-section">
-
-            <div class="container cta-content">
-
-                <div>
-                    <p class="section-label">LET'S CONNECT</p>
-
-                    <h2>
-                        Interested in my work?
-                    </h2>
-
-                    <p>
-                        Explore my projects or get in touch to discuss
-                        opportunities.
-                    </p>
-                </div>
-
-                <a href="contact.html" class="btn btn-light">
-                    Invite Me to Interview
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-
-        <div class="container footer-content">
-
-            <p>
-                © 2026 Ishwar Lal
-            </p>
-
-            <div>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-
+        <div class="readout-cell">
+          <div class="val signal">0.70</div>
+          <div class="lbl">Precision@50</div>
         </div>
+        <div class="readout-cell">
+          <div class="val">25 / 7</div>
+          <div class="lbl">Train / test clients</div>
+        </div>
+        <div class="readout-cell">
+          <div class="val flag">0</div>
+          <div class="lbl">Client overlap</div>
+        </div>
+      </div>
+      <div class="readout-foot">Client-grouped split · 3,419 test rows · see full case study →</div>
+    </div>
+  </section>
 
-    </footer>
+  <!-- ABOUT SNIPPET -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About My Work</span>
+        <h2>Learning by building with real data.</h2>
+        <p class="lede">My work focuses on machine learning and data-focused projects, with an emphasis on understanding the problem, working with real data, evaluating models honestly, and communicating results that hold up under scrutiny.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- FEATURED PROJECT -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Featured Case Study</span>
+        <h2>FlyRank content refresh &amp; search intelligence</h2>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-visual">
+          <div>
+            <span class="feature-tag">Content Refresh · Search Intelligence</span>
+          </div>
+          <div class="feature-mark">ML</div>
+        </div>
+        <div class="feature-body">
+          <h3>Prioritizing content that may be declining</h3>
+          <p>A supervised learning project using search and content-performance data to identify items that may need attention, and produce a ranked priority list to support content-review decisions.</p>
+          <div class="stat-row">
+            <div class="stat"><span class="n">0.65</span><span class="l">Precision@20</span></div>
+            <div class="stat"><span class="n">0.70</span><span class="l">Precision@50</span></div>
+            <div class="stat"><span class="n">3,419</span><span class="l">Test rows</span></div>
+          </div>
+          <a href="projects.html" class="btn btn-outline">
+            Explore Case Study
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS OVERVIEW -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Skills Overview</span>
+        <h2>Tools and areas I'm building with.</h2>
+      </div>
+      <div class="tile-grid">
+        <div class="tile reveal">
+          <div class="tile-icon" aria-hidden="true">ML</div>
+          <h3>Machine Learning</h3>
+          <p>Building and evaluating supervised models around practical, real-world problems.</p>
+        </div>
+        <div class="tile reveal">
+          <div class="tile-icon" aria-hidden="true">DS</div>
+          <h3>Data Science</h3>
+          <p>Working with data to find signals, engineer features, and communicate findings clearly.</p>
+        </div>
+        <div class="tile reveal">
+          <div class="tile-icon" aria-hidden="true">AI</div>
+          <h3>Applied AI</h3>
+          <p>Exploring practical, grounded applications of AI and machine learning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="cta-band reveal">
+        <span class="eyebrow" style="justify-content:center;">Let's Connect</span>
+        <h2>Interested in my work?</h2>
+        <p class="lede" style="margin-left:auto;margin-right:auto;">Explore my projects or get in touch to discuss internship and entry-level opportunities.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary">Invite Me to Interview</a>
+          <a href="projects.html" class="btn btn-outline">View Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Ishwar Lal</p>
+    <ul class="footer-links">
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
