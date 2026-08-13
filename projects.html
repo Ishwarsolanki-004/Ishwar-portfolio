@@ -1,306 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Projects | Ishwar Lal</title>
-
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Ishwar Lal</title>
+<meta name="description" content="Machine learning and data science projects by Ishwar Lal, including the FlyRank content refresh and search intelligence case study.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="container nav-content">
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">IL</span>
+      Ishwar Lal
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="nav-cta" href="resume.pdf" target="_blank" rel="noopener noreferrer" data-resume-link>Resume</a></li>
+      </ul>
+      <a class="nav-cta desktop-only" href="resume.pdf" target="_blank" rel="noopener noreferrer" data-resume-link>Resume</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
 
-            <a href="index.html" class="logo">
-                <span class="logo-mark">IL</span>
-                <span>Ishwar Lal</span>
-            </a>
+<main id="main">
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="projects.html" class="active">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">My Work</span>
+        <h1>Projects built around real-world problems.</h1>
+        <p class="lede">Machine learning and data-focused work, with an emphasis on problem framing, honest evaluation, and practical decision support.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- FLYRANK CASE STUDY -->
+  <section class="section-border-t">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <span class="eyebrow">Lead Case · Content Refresh / Search Intelligence</span>
+        <h2>FlyRank ML Project</h2>
+        <p class="lede">A machine learning project that uses content and search performance data to identify items that may be declining, producing a ranked priority list to support content-review decisions.</p>
+      </div>
+
+      <div class="case-block reveal">
+        <div class="case-num"><span>01</span>Problem</div>
+        <div>
+          <h3>Identifying content that may need attention</h3>
+          <p>The project focuses on identifying content items with an observed declining label, and producing a ranked priority list that supports content-review decisions rather than making the call outright.</p>
         </div>
-    </header>
-
-
-    <main>
-
-        <!-- Page Introduction -->
-        <section class="hero">
-            <div class="container">
-
-                <p class="eyebrow">MY WORK</p>
-
-                <h1>
-                    Projects built around
-                    <span>real-world problems.</span>
-                </h1>
-
-                <p class="hero-description">
-                    A collection of machine learning and data-focused work,
-                    with an emphasis on problem framing, honest evaluation,
-                    and practical decision support.
-                </p>
-
-            </div>
-        </section>
-
-
-        <!-- Lead Case -->
-        <section class="section featured-section">
-
-            <div class="container">
-
-                <p class="section-label">LEAD CASE</p>
-
-                <h2>
-                    FlyRank Content Refresh / Search Intelligence ML Project
-                </h2>
-
-                <p class="hero-description">
-                    A machine learning project using content performance data
-                    to identify potentially declining content and prioritize
-                    items for review.
-                </p>
-
-
-                <!-- Problem -->
-                <div class="case-section">
-
-                    <p class="section-label">01 — PROBLEM</p>
-
-                    <h3>
-                        Identifying content that may need attention
-                    </h3>
-
-                    <p>
-                        The project focuses on identifying content items with
-                        an observed declining label and producing a ranked
-                        priority list that can support content-review decisions.
-                    </p>
-
-                </div>
-
-
-                <!-- Approach -->
-                <div class="case-section">
-
-                    <p class="section-label">02 — APPROACH</p>
-
-                    <h3>
-                        Start simple, validate honestly
-                    </h3>
-
-                    <p>
-                        The modeling work used a client-grouped train/test split
-                        so that clients in the training data did not overlap
-                        with clients in the test data.
-                    </p>
-
-                    <p>
-                        Logistic Regression was selected as a readable baseline
-                        model for the supervised learning problem. During model
-                        inspection, potentially problematic label-derived
-                        signals were checked and removed before training the
-                        clean model.
-                    </p>
-
-                </div>
-
-
-                <!-- Results -->
-                <div class="case-section">
-
-                    <p class="section-label">03 — RESULTS & EVIDENCE</p>
-
-                    <h3>
-                        Clean Logistic Regression
-                    </h3>
-
-                    <div class="results-grid">
-
-                        <div class="result-card">
-                            <span class="result-number">0.65</span>
-                            <span class="result-label">
-                                Precision@20
-                            </span>
-                        </div>
-
-                        <div class="result-card">
-                            <span class="result-number">0.70</span>
-                            <span class="result-label">
-                                Precision@50
-                            </span>
-                        </div>
-
-                        <div class="result-card">
-                            <span class="result-number">3,419</span>
-                            <span class="result-label">
-                                Test rows
-                            </span>
-                        </div>
-
-                    </div>
-
-                    <p class="result-note">
-                        The test split contained 25 training clients and
-                        7 test clients, with zero client overlap.
-                    </p>
-
-                </div>
-
-
-                <!-- Error Analysis -->
-                <div class="case-section">
-
-                    <p class="section-label">04 — ERROR ANALYSIS</p>
-
-                    <h3>
-                        Reading the model's mistakes
-                    </h3>
-
-                    <p>
-                        The clean model produced 964 false positives and
-                        370 false negatives on the test set. Three inspected
-                        cases showed that some content items have mixed signals,
-                        making them difficult to classify cleanly.
-                    </p>
-
-                    <div class="error-grid">
-
-                        <div class="error-card">
-                            <strong>False positive</strong>
-                            <p>
-                                A high-impression item with a page-1 position
-                                received a high declining score despite having
-                                a non-declining label.
-                            </p>
-                        </div>
-
-                        <div class="error-card">
-                            <strong>False positive</strong>
-                            <p>
-                                An item with weak impressions, engagement,
-                                and search position resembled patterns
-                                associated with decline.
-                            </p>
-                        </div>
-
-                        <div class="error-card">
-                            <strong>False negative</strong>
-                            <p>
-                                A genuinely declining item received a score
-                                of 0.4998, showing uncertainty around the
-                                classification threshold.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Tools -->
-                <div class="case-section">
-
-                    <p class="section-label">05 — TOOLS USED</p>
-
-                    <div class="tool-list">
-                        <span>Python</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                        <span>Scikit-learn</span>
-                        <span>Logistic Regression</span>
-                        <span>Jupyter Notebook</span>
-                    </div>
-
-                </div>
-
-
-                <!-- Repository -->
-                <div class="case-section">
-
-                    <p class="section-label">06 — REPOSITORY</p>
-
-                    <h3>
-                        Project development
-                    </h3>
-
-                    <p>
-                        The project notebook and supporting work are maintained
-                        in the FlyRank internship repository.
-                    </p>
-
-                    <a
-                        href="https://github.com/Ishwarsolanki-004"
-                        class="btn btn-primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View GitHub
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CTA -->
-        <section class="cta-section">
-
-            <div class="container cta-content">
-
-                <div>
-                    <p class="section-label">NEXT</p>
-
-                    <h2>
-                        Want to know more about my work?
-                    </h2>
-
-                    <p>
-                        Learn more about my background and current learning focus.
-                    </p>
-                </div>
-
-                <a href="about.html" class="btn btn-light">
-                    About Me
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-
-        <div class="container footer-content">
-
-            <p>
-                © 2026 Ishwar Lal
-            </p>
-
-            <div>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-
+      </div>
+
+      <div class="case-block reveal">
+        <div class="case-num"><span>02</span>Approach</div>
+        <div>
+          <h3>Start simple, validate honestly</h3>
+          <p>The modeling used a client-grouped train/test split, so clients present in training never appeared in the test set — avoiding an easy but misleading source of overlap.</p>
+          <p>Logistic Regression was chosen as a readable baseline model for the supervised classification problem. During model inspection, potentially problematic label-derived signals were identified and removed before training the final, "clean" model.</p>
+          <div class="chip-row" aria-label="Tools used in this project">
+            <span class="chip">Python</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">Logistic Regression</span>
+            <span class="chip">Jupyter Notebook</span>
+          </div>
         </div>
+      </div>
 
-    </footer>
+      <div class="case-block reveal">
+        <div class="case-num"><span>03</span>Results</div>
+        <div>
+          <h3>Clean Logistic Regression</h3>
+          <p>Evaluated on a held-out test set with zero client overlap between the 25 training clients and 7 test clients:</p>
+          <div class="result-strip">
+            <div class="result-cell"><div class="n">0.65</div><div class="l">Precision@20</div></div>
+            <div class="result-cell"><div class="n">0.70</div><div class="l">Precision@50</div></div>
+            <div class="result-cell"><div class="n">3,419</div><div class="l">Test rows</div></div>
+            <div class="result-cell"><div class="n">25 / 7</div><div class="l">Train / test clients</div></div>
+          </div>
+        </div>
+      </div>
 
+      <div class="case-block reveal">
+        <div class="case-num"><span>04</span>Error Analysis</div>
+        <div>
+          <h3>Reading the model's mistakes</h3>
+          <p>The clean model produced 964 false positives and 370 false negatives on the test set. Inspecting individual cases showed that some content items carry mixed signals, making them genuinely difficult to classify cleanly.</p>
+          <div class="error-cards">
+            <div class="error-card">
+              <span class="tag">False Positive</span>
+              <p>A high-impression item with a page-1 search position received a high declining score, despite carrying a non-declining label.</p>
+            </div>
+            <div class="error-card">
+              <span class="tag">False Positive</span>
+              <p>An item with weak impressions, engagement, and search position resembled patterns typically associated with decline.</p>
+            </div>
+            <div class="error-card">
+              <span class="tag">False Negative</span>
+              <p>A genuinely declining item scored 0.4998 — right at the classification threshold, illustrating the model's uncertainty in borderline cases.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-block reveal">
+        <div class="case-num"><span>05</span>Tools Used</div>
+        <div>
+          <div class="chip-row">
+            <span class="chip">Python</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">Logistic Regression</span>
+            <span class="chip">Jupyter Notebook</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-block reveal">
+        <div class="case-num"><span>06</span>Repository</div>
+        <div>
+          <h3>Project development</h3>
+          <p>The project notebook and supporting work are maintained in the FlyRank internship repository.</p>
+          <a href="https://github.com/Ishwarsolanki-004" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            View on GitHub
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-placeholder reveal">
+        <p><strong>More projects — in progress.</strong> Additional case studies will be added here as they're completed. <span class="placeholder-text">Add your next project's name, GitHub link, and live demo (if any)</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="section-border-t">
+    <div class="container">
+      <div class="cta-band reveal">
+        <span class="eyebrow" style="justify-content:center;">Next</span>
+        <h2>Want to know more about my background?</h2>
+        <p class="lede" style="margin-left:auto;margin-right:auto;">Learn more about my education, skills, and current learning focus.</p>
+        <div class="btn-row">
+          <a href="about.html" class="btn btn-primary">About Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Ishwar Lal</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
