@@ -121,6 +121,22 @@ p{ margin: 0 0 1em; color: var(--text-secondary); }
   flex-shrink:0;
 }
 
+.availability-badge{
+  display:inline-flex; align-items:center; gap:.6rem;
+  padding: .5rem .9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-raised);
+  font-size: .82rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.4rem;
+}
+.pulse-dot{
+  width:7px; height:7px; border-radius:50%;
+  background: var(--good); flex-shrink:0;
+  box-shadow: 0 0 0 3px rgba(134,192,138,.18);
+}
+
 /* ============================================================
    Nav
    ============================================================ */
@@ -292,6 +308,38 @@ p{ margin: 0 0 1em; color: var(--text-secondary); }
 
 @media (max-width: 860px){
   .hero{ grid-template-columns: 1fr; }
+}
+
+.availability-badge{
+  display:inline-flex; align-items:center; gap:.6rem;
+  margin-top: 1.4rem;
+  padding: .5rem .9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--text-secondary);
+  background: var(--bg-raised);
+}
+
+.step-strip{
+  display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  margin-top: 1rem;
+}
+.step-num{
+  display:block; font-family: var(--font-mono); font-size:.78rem;
+  color: var(--signal); letter-spacing:.08em; margin-bottom:.6rem;
+}
+.step h3{ font-size: 1.05rem; margin-bottom:.4rem; }
+.step p{ font-size:.9rem; margin:0; }
+@media (max-width: 760px){ .step-strip{ grid-template-columns: 1fr; gap: 1.75rem; } }
+
+.feature-note{
+  font-size: .86rem;
+  color: var(--text-muted);
+  border-left: 2px solid var(--border);
+  padding-left: .8rem;
+  margin: 1rem 0 1.4rem;
 }
 
 /* ============================================================
