@@ -543,6 +543,7 @@ section{ padding: clamp(3rem, 7vw, 5.5rem) 0; }
 .cta-band::before{
   content:""; position:absolute; inset:0;
   background: radial-gradient(60% 120% at 50% 0%, rgba(95,168,211,.18), transparent 70%);
+  pointer-events: none;
 }
 .cta-band h2{ margin-bottom: .6rem; }
 .cta-band p{ margin: 0 auto 1.6rem; }
