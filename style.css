@@ -205,16 +205,19 @@ p{ margin: 0 0 1em; color: var(--text-secondary); }
 @media (max-width: 860px){
   .nav-links{
     position: fixed; inset: 64px 0 0 0;
-    background: rgba(10,12,16,.98);
+    background: var(--bg);
     backdrop-filter: blur(16px);
     flex-direction: column; justify-content:flex-start;
     padding: 2rem var(--gutter);
     gap: 1.5rem;
-    transform: translateY(-8px);
-    opacity:0; visibility:hidden;
-    transition: opacity var(--dur-med) var(--ease), transform var(--dur-med) var(--ease), visibility var(--dur-med);
+    transform: translateY(-12px);
+    visibility:hidden;
+    transition: transform var(--dur-med) var(--ease), visibility 0s var(--dur-med);
   }
-  .nav-links.is-open{ opacity:1; visibility:visible; transform: translateY(0); }
+  .nav-links.is-open{
+    visibility:visible; transform: translateY(0);
+    transition: transform var(--dur-med) var(--ease), visibility 0s;
+  }
   .nav-links a{ font-size: 1.15rem; }
   .nav-links li.mobile-resume-item{ display:list-item; }
   .nav-cta.desktop-only{ display:none; }
