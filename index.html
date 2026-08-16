@@ -128,34 +128,91 @@
     </div>
   </section>
 
-  <!-- FEATURED PROJECT -->
+    <!-- FEATURED PROJECT -->
   <section class="section-border-t">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Featured Case Study</span>
-        <h2>FlyRank content refresh &amp; search intelligence</h2>
+        <h2>FlyRank ML Internship — Content Refresh &amp; Search Intelligence</h2>
       </div>
+  
       <div class="feature-card reveal">
+  
         <div class="feature-visual">
           <div>
-            <span class="feature-tag">Content Refresh · Search Intelligence</span>
+            <span class="feature-tag">
+              FlyRank ML Internship · Content Refresh · Search Intelligence
+            </span>
           </div>
+  
           <div class="feature-mark">ML</div>
         </div>
+  
         <div class="feature-body">
+  
           <h3>Prioritizing content that may be declining</h3>
-          <p>A supervised learning project using search and content-performance data to identify items that may need attention, and produce a ranked priority list to support content-review decisions.</p>
-          <div class="chip-row" aria-label="Tools used">
+  
+          <p>
+            Built as part of my FlyRank ML internship, this supervised
+            learning project uses search and content-performance data to
+            prioritize pages for editorial review.
+          </p>
+  
+          <div class="chip-row" aria-label="Tools and methods used">
             <span class="chip">Python</span>
             <span class="chip">Scikit-learn</span>
             <span class="chip">Logistic Regression</span>
             <span class="chip">Client-grouped split</span>
           </div>
-          <p class="feature-note">Includes a full error-analysis breakdown — false positives, false negatives, and where the model gets uncertain.</p>
+  
+          <!-- Validation Results -->
+          <div class="project-results">
+  
+            <div class="result-item">
+              <strong>0.65</strong>
+              <span>Precision@20</span>
+            </div>
+  
+            <div class="result-item">
+              <strong>0.70</strong>
+              <span>Precision@50</span>
+            </div>
+  
+            <div class="result-item">
+              <strong>25 / 7</strong>
+              <span>Train / held-out clients</span>
+            </div>
+  
+            <div class="result-item">
+              <strong>0</strong>
+              <span>Client overlap</span>
+            </div>
+  
+          </div>
+  
+          <p class="feature-note">
+            The grouped evaluation is an observed result on 7 held-out
+            clients. It provides directional decision-support for
+            prioritizing content review and does not guarantee performance
+            for every future client.
+          </p>
+  
+          <p class="feature-note">
+            The model was also audited for label-derived and
+            label-aligned features before the final evaluation.
+          </p>
+  
           <a href="projects.html" class="btn btn-outline">
             Explore Case Study
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
           </a>
+  
         </div>
       </div>
     </div>
