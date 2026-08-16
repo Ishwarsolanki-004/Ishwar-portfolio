@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask My Agent | Ishwar Lal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0C10;
+    --panel:#12151B;
+    --border:#22262F;
+    --text:#EAEDF1;
+    --muted:#8B93A1;
+    --accent:#5FA8D3;
+    --accent-dim:rgba(95,168,211,0.12);
+    --user-bubble:#1B2029;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px 16px;
+  }
+  .wrap{
+    width:100%;
+    max-width:640px;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .dot{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 8px var(--accent);
+  }
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:28px;
+    margin:10px 0 4px;
+    letter-spacing:-0.01em;
+  }
+  .sub{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:20px;
+    line-height:1.5;
+  }
+  .terminal{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .term-bar{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:12px 14px;
+    border-bottom:1px solid var(--border);
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--muted);
+  }
+  .term-bar span.tag{
+    width:9px;height:9px;border-radius:50%;
+    background:#3A3F4B;
+  }
+  .term-bar .path{
+    margin-left:8px;
+  }
+  #chat{
+    height:400px;
+    overflow-y:auto;
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  #chat::-webkit-scrollbar{width:8px;}
+  #chat::-webkit-scrollbar-thumb{background:var(--border);border-radius:8px;}
+  .msg{
+    max-width:85%;
+    padding:11px 14px;
+    border-radius:10px;
+    font-size:14.5px;
+    line-height:1.55;
+    white-space:pre-wrap;
+  }
+  .msg.agent{
+    align-self:flex-start;
+    background:var(--accent-dim);
+    border:1px solid rgba(95,168,211,0.25);
+    color:var(--text);
+  }
+  .msg.user{
+    align-self:flex-end;
+    background:var(--user-bubble);
+    border:1px solid var(--border);
+    color:var(--text);
+  }
+  .msg.agent .label, .msg.user .label{
+    display:block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:5px;
+  }
+  .typing{
+    align-self:flex-start;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    color:var(--muted);
+    padding:0 14px;
+  }
+  .suggestions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    padding:0 18px 14px;
+  }
+  .chip{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--accent);
+    background:transparent;
+    border:1px solid rgba(95,168,211,0.3);
+    padding:6px 10px;
+    border-radius:20px;
+    cursor:pointer;
+    transition:background 0.15s ease;
+  }
+  .chip:hover{background:var(--accent-dim);}
+  form{
+    display:flex;
+    gap:8px;
+    padding:14px;
+    border-top:1px solid var(--border);
+  }
+  input[type=text]{
+    flex:1;
+    background:var(--bg);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:8px;
+    padding:11px 12px;
+    font-family:'Inter',sans-serif;
+    font-size:14px;
+    outline:none;
+  }
+  input[type=text]:focus{border-color:var(--accent);}
+  button{
+    background:var(--accent);
+    color:#0A0C10;
+    border:none;
+    border-radius:8px;
+    padding:0 18px;
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:14px;
+    cursor:pointer;
+    transition:opacity 0.15s ease;
+  }
+  button:disabled{opacity:0.5;cursor:not-allowed;}
+  .foot{
+    margin-top:14px;
+    text-align:center;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    color:var(--muted);
+  }
+  .foot a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="eyebrow"><span class="dot"></span> personal agent · capstone</div>
+  <h1>Ask my agent about my work.</h1>
+  <p class="sub">A small AI agent trained on my resume, projects, and skills. Ask it about the FlyRank internship, my tools, or how to reach me.</p>
+
+  <div class="terminal">
+    <div class="term-bar">
+      <span class="tag"></span><span class="tag"></span><span class="tag"></span>
+      <span class="path">ishwar-agent — running</span>
+    </div>
+
+    <div id="chat">
+      <div class="msg agent">
+        <span class="label">agent</span>
+        Hi, I'm Ishwar's portfolio agent. Ask me about his FlyRank ML internship, his skills, or how to get in touch — I'll answer from what's actually on his resume and site.
+      </div>
+    </div>
+
+    <div class="suggestions" id="suggestions">
+      <button type="button" class="chip" data-q="What did you build during the FlyRank internship?">FlyRank internship?</button>
+      <button type="button" class="chip" data-q="What tools and skills does Ishwar know?">Skills?</button>
+      <button type="button" class="chip" data-q="How can I contact Ishwar?">Contact info?</button>
+    </div>
+
+    <form id="chatForm">
+      <input type="text" id="userInput" placeholder="Type a question…" autocomplete="off" />
+      <button type="submit" id="sendBtn">Ask</button>
+    </form>
+  </div>
+
+  <p class="foot">Built with the Claude API · see the <a href="https://github.com/Ishwarsolanki-004/ML-internship-with-flyrank-ai" target="_blank" rel="noopener">FlyRank repo</a></p>
+
+</div>
+
+<script>
+const SYSTEM_PROMPT = `You are a small AI agent embedded on Ishwar Lal's portfolio website. You speak ABOUT Ishwar in the third person, as his assistant — never pretend to be Ishwar himself.
+
+Answer questions using ONLY the facts below. If something isn't covered, say you don't have that detail and suggest the visitor check his resume, GitHub, or contact page. Keep answers short (2-4 sentences), plain, and friendly — no fluff, no over-selling.
+
+FACTS ABOUT ISHWAR LAL:
+- B.Tech student, aspiring Machine Learning / Data Science developer.
+- Open to Machine Learning, Data Science, and AI internships and entry-level roles.
+- Core skills: Python, SQL, Scikit-learn, Logistic Regression, Model Evaluation, Pandas, NumPy, Matplotlib, Git & GitHub, Jupyter Notebook.
+
+FLYRANK ML INTERNSHIP PROJECT (his lead case study):
+- A supervised learning project (Content Refresh / Search Intelligence) built during his FlyRank ML internship.
+- Goal: identify content items that may be declining and produce a ranked priority list to support content-review decisions (a decision-support tool, not an automatic decision-maker).
+- Used a client-grouped train/test split (25 training clients, 7 held-out clients) with zero client overlap, to avoid misleading validation results.
+- Chose Logistic Regression as a readable baseline model.
+- Ran a leakage audit: identified and removed label-derived and decision-derived features before training the "clean" model; ID columns were used only for grouping, never as features.
+- Results on the held-out test set (3,419 rows): Precision@20 = 0.65, Precision@50 = 0.70, against a test base rate of 0.52.
+- Explicitly frames these as directional, decision-support results on this evaluation — not a guarantee of future performance.
+- Error analysis: 964 false positives, 370 false negatives. Example false negative: a genuinely declining item scored 0.4998, right at the classification threshold.
+- Code: https://github.com/Ishwarsolanki-004/ML-internship-with-flyrank-ai
+
+LINKS:
+- GitHub: https://github.com/Ishwarsolanki-004
+- LinkedIn: https://www.linkedin.com/in/ishwar-lal20a04
+- Resume: https://ishwarsolanki-004.github.io/Ishwar-portfolio/resume.pdf
+- Contact page: https://ishwarsolanki-004.github.io/Ishwar-portfolio/contact.html
+
+If asked something unrelated to Ishwar's work (general trivia, coding help unrelated to him, etc.), politely redirect to what you can help with: questions about his background, this project, and his skills.`;
+
+let history = [];
+
+const chat = document.getElementById('chat');
+const form = document.getElementById('chatForm');
+const input = document.getElementById('userInput');
+const sendBtn = document.getElementById('sendBtn');
+const suggestions = document.getElementById('suggestions');
+
+function addMessage(role, text){
+  const div = document.createElement('div');
+  div.className = 'msg ' + (role === 'user' ? 'user' : 'agent');
+  const label = document.createElement('span');
+  label.className = 'label';
+  label.textContent = role === 'user' ? 'you' : 'agent';
+  div.appendChild(label);
+  div.appendChild(document.createTextNode(text));
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+  return div;
+}
+
+function addTyping(){
+  const div = document.createElement('div');
+  div.className = 'typing';
+  div.id = 'typingIndicator';
+  div.textContent = 'agent is typing…';
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function removeTyping(){
+  const el = document.getElementById('typingIndicator');
+  if(el) el.remove();
+}
+
+async function askAgent(question){
+  addMessage('user', question);
+  history.push({ role: 'user', content: question });
+  input.value = '';
+  sendBtn.disabled = true;
+  addTyping();
+
+  try{
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1000,
+        system: SYSTEM_PROMPT,
+        messages: history
+      })
+    });
+
+    const data = await response.json();
+    const textBlocks = (data.content || []).filter(b => b.type === 'text').map(b => b.text);
+    const reply = textBlocks.join('\n').trim() || "Sorry, I couldn't generate a reply just now — try again in a moment.";
+
+    removeTyping();
+    addMessage('agent', reply);
+    history.push({ role: 'assistant', content: reply });
+  } catch(err){
+    removeTyping();
+    addMessage('agent', "Something went wrong reaching the agent. Please try again.");
+    console.error('Agent error:', err);
+  } finally {
+    sendBtn.disabled = false;
+  }
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const q = input.value.trim();
+  if(!q) return;
+  askAgent(q);
+});
+
+suggestions.addEventListener('click', (e) => {
+  const btn = e.target.closest('.chip');
+  if(!btn) return;
+  askAgent(btn.dataset.q);
+});
+</script>
+
+</body>
+</html>
