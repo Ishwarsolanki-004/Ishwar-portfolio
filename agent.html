@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
   :root{
     --bg:#0A0C10;
@@ -25,10 +26,11 @@
     color:var(--text);
     font-family:'Inter',sans-serif;
     min-height:100vh;
+  }
+  .agent-main{
     display:flex;
-    align-items:center;
     justify-content:center;
-    padding:32px 16px;
+    padding:48px 16px;
   }
   .wrap{
     width:100%;
@@ -192,6 +194,85 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">
+    Skip to content
+</a>
+
+<header class="site-header">
+    <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true">
+                IL
+            </span>
+            Ishwar Lal
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links" id="nav-links">
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+                <li class="mobile-resume-item">
+                    <a
+                        class="nav-cta"
+                        href="resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-resume-link
+                    >
+                        Resume
+                    </a>
+                </li>
+            </ul>
+            <a
+                class="nav-cta desktop-only"
+                href="resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-resume-link
+            >
+                Resume
+            </a>
+            <button
+                class="nav-toggle"
+                id="nav-toggle"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                >
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<main id="main" class="agent-main">
 <div class="wrap">
 
   <div class="eyebrow"><span class="dot"></span> personal agent · capstone</div>
@@ -226,7 +307,34 @@
   <p class="foot">Built with the Claude API · see the <a href="https://github.com/Ishwarsolanki-004/ML-internship-with-flyrank-ai" target="_blank" rel="noopener">FlyRank repo</a></p>
 
 </div>
+</main>
 
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>
+            © 2026 Ishwar Lal
+        </p>
+        <ul class="footer-links">
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 <script>
 const SYSTEM_PROMPT = `You are a small AI agent embedded on Ishwar Lal's portfolio website. You speak ABOUT Ishwar in the third person, as his assistant — never pretend to be Ishwar himself.
 
